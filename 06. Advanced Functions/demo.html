@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button id="callBtn">Call Person</button> 
+   
+   <script>
+       const person = {
+     name: "Peter",
+     respond() {
+       alert(`${this.name} says hello!`);
+     }
+   }
+   const boundRespond = person.respond.bind(person);
+   document.getElementById('callBtn')
+          .addEventListener('click', person.respond);
+//    document.getElementById('callBtn')
+//           .addEventListener('click', boundRespond);
+   
+   </script>
+</body>
+</html>

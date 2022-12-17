@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <section>
+
+        <p><strong>Click me to increase the amount:</strong></p>
+        <button>Button</button>
+        
+        <p><strong>Times clicked on the button:</strong></p>
+        <p id="times">0</p>
+    </section>
+
+    <section>
+        <p><strong>Indicate the total amount:</strong></p>
+        <input type="text">
+    </section>
+
+</body>
+<script>
+    const times = document.getElementById('times');
+    const button = document.querySelector('button')
+    button.addEventListener('click', increment);
+    function increment(){
+        const newValue = Number(times.textContent) + 1;
+        times.textContent = newValue;
+
+    }
+</script>
+</html>
+
